@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="1.3880" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-11-28T21:01:58" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Casos de prueba" timestamp="2021-11-28T21:01:58" tests="1" file="C:\Users\AngelPa\Desktop\ProyectoGPDSFINAL\tests\maintest.js" time="1.3860" failures="0">
+    <testcase name="Casos de prueba Entrar a Login e ingresar" time="1.3840" classname="Entrar a Login e ingresar">
+    </testcase>
+  </testsuite>
+</testsuites>
