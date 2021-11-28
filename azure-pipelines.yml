@@ -18,4 +18,12 @@ steps:
 - script: |
     npm install
     npm run build
+    npm install --save-dev mocha
+    npm install --g mocha-junit-reporter
+    npm test
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'
+    testRunTitle: 'Prueba'
   displayName: 'npm install and build'
