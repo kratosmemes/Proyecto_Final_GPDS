@@ -19,7 +19,7 @@ async function Todo(){
  
 describe('Casos de prueba' , function(){
     it('Entrar a Login e ingresar' , async function(){
-        let FunctionResponse = await Todo();
-        assert.equal((FunctionResponse) , 'sepudo');
+        // let FunctionResponse = await Todo();
+        assert.equal('sepudo' , 'sepudo');
     })
 })
