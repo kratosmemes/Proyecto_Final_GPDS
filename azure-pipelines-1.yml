@@ -1,4 +1,6 @@
 # Node.js
+
+
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
@@ -15,6 +17,16 @@ steps:
     versionSpec: '16.x'
   displayName: 'Install Node.js'
 
+- task: SonarCloudPrepare@1  
+  displayName: "Preparando conexion sonarcloud"
+  inputs:
+    SonarCloud: 'ConexionBuena'
+    organization: 'organizaciones'
+    scannerMode: 'CLI'
+    configMode: 'file'
+    proyectKey: '181464_Proyecto_Final_GPDSV2'
+    projectName: 'Proyecto_Final_GPDSV2'
+      
 - script: |
     npm install
     npm run build
