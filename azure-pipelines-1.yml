@@ -33,7 +33,7 @@ steps:
     npm run build
   displayName: 'npm install and build'
   condition: 
-  - task: SonarCloudAnalyze@1
+- task: SonarCloudAnalyze@1
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
