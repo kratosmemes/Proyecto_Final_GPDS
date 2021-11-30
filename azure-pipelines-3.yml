@@ -1,0 +1,26 @@
+trigger:
+- master
+
+resources:
+  repositories:
+  - repository: self
+    type: git
+    ref: master
+jobs:
+- job: Job_1
+  displayName: Agent job 1
+  pool:
+    vmImage: windows-2019
+  steps:
+  - checkout: self
+  - task: FtpUpload@2
+    displayName: 'FTP Upload: src'
+    inputs:
+      credsType: inputs
+      serverEndpoint: 94427bfd-da5a-4f81-bd1d-fe48cb18e41a
+      serverUrl: ftp://evenodepruebas.ftp.evennode.com
+      username: evenodepruebas_b82f5
+      password: 123123123
+      rootFolder: src
+      remotePath: /src/
+
