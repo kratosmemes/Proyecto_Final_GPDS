@@ -7,6 +7,6 @@ app.get('/home' , (req,res)=>{
     res.status(200);
 });
 
-app.use(express.static(path.join(__dirname , 'public')));
+app.use(express.static(path.join(__dirname , 'src/public')));
 
 app.listen(3000);
